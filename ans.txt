@@ -1,0 +1,51 @@
+Q1: Nous allons créer un nouveau dossier "BacSable", l'initialiser avec Git, et créer deux branches, "Branch1" et "Branch2". Nous allons basculer sur "Branch1" et finalement après réflexion, nous allons supprimer la branche "Branch2". Quelles sont les commandes utilisées ?
+
+ans: 	git init
+	git add test.txt
+	git commit
+	git branch Branch1
+	git branch Branch2
+	git checkout Branch1
+	git branch -d Branch2
+
+
+Q2: Maintenant que je suis sur ma Branch1, nous allons ajouter un fichier "File2.txt".Finalement, je ne veux plus ajouter mon fichier sur cette branche mais sur une nouvelle branche, "BranchFile". Que dois-je faire ? 
+
+ans: 	git status
+	git stash
+	git branch BranchFile
+	git checkout BranchFile
+	git stash apply
+
+
+Q3: git commit --amend -m "Test"
+
+ans: permettre de modifier le message du commit précédent
+
+
+
+Q4: Je souhaite revenir sur le commit précédent et modifier son contenu en ajoutant un fichier, que dois-je faire ?
+
+ans: 	git add monFichierOublié
+	git commit --amend --no-edit
+
+
+Q5: Quelle est la différence entre Git revert et Git reset ?
+
+ans: Git revert va créer un nouveau commit alors que Git reset, non.
+
+
+Q6: Je souhaite savoir qui a touché à une ligne en particulier dans le fichier test.html, quelle commande vais-je devoir exécuter ? 
+
+ans: git blame 
+
+
+Q7: Quelles sont les trois zones locales majeures ?
+
+ans: working directory 
+	repository
+	stage 
+
+Q8: Qu'est ce qu'un SHA ?
+
+ans: Un SHA est un identifiant pour les commits et autres actions gardés en mémoire par Git
